@@ -423,3 +423,156 @@ span:hover::after {
         font-size: 12px;
     }
 }
+
+
+/* === RESPONSIVE FIXES (ONLY ADDED, NOTHING REMOVED) === */
+@media (max-width: 768px) {
+    /* Footer responsiveness */
+    .footer {
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .footer p,
+    .footer hr {
+        margin-left: 0;
+    }
+
+    /* Section header responsiveness */
+    .section-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .section-header h2 {
+        white-space: normal;
+        font-size: 1.5rem;
+    }
+
+    .section-header p {
+        max-width: 90%;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Footer extra small screens */
+    .footer {
+        padding: 30px 10px;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+
+    /* Product grid tweaks */
+    .product-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .product h3 {
+        font-size: 1rem;
+    }
+
+    .product .price {
+        font-size: 1rem;
+    }
+}
+
+/* Logo and discount banner fix */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-logo {
+    max-height: 60px; /* control logo size */
+    height: auto;
+    width: auto;
+}
+
+.discount-banner {
+    max-height: 50px; /* control discount image size */
+    height: auto;
+    width: auto;
+    margin-left: 15px;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .discount-banner {
+        max-height: 40px;
+        margin: 0;
+    }
+}
+
+/* Hide nav menu by default on small screens */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #131313;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+/* Hide the menu button on larger screens */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Default (mobile) */
+.list-margin {
+    margin: 0;
+}
+
+/* Desktop and tablets only */
+@media (min-width: 769px) {
+    .list-margin {
+        margin: 160px;
+    }
+}
+
+.discount-img {
+    width: 300px;
+    margin-left: 200px; /* default margin for desktop/large screens */
+}
+
+@media (max-width: 1062px) {
+    .discount-img {
+        margin-left: 50px; /* smaller margin for tablets and below */
+    }
+}
+
+@media (max-width: 771px) {
+    .discount-img {
+        margin-left: 0px; /* even smaller margin for mobile */
+    }
+}
