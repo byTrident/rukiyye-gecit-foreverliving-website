@@ -18,3 +18,14 @@ const menuToggle = document.getElementById('menu-toggle');
   menuToggle.addEventListener('click', () => {
       navList.classList.toggle('show');
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navList = document.getElementById("nav-list");
+
+    // START HIDDEN — no .active class
+
+    menuToggle.addEventListener("click", function () {
+      navList.classList.toggle("active");
+    });
+  });
